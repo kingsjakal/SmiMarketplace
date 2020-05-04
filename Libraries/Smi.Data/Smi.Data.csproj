@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Copyright>Copyright © Smi Solutions, Ltd</Copyright>
+    <Company>Smi Solutions, Ltd</Company>
+    <Authors>Smi Solutions, Ltd</Authors>
+    <Version>4.3.0.0</Version>
+    <Description>The Smi.Data project contains a set of classes and functions for reading from and writing to a database or other data store. It helps separate data-access logic from your business objects. SmiMarketplace uses the Entity Framework (EF) Code-First approach. It allows you to define entities in the source code (all core entities are defined into Smi.Core project), and then get EF to generate the database from that. That's why it's called Code-First. You can then query your objects using LINQ, which gets translated to SQL behind the scenes and executed against the database. SmiMarketplaces use a fluent code API to fully customize the persistence mapping.</Description>
+    <PackageLicenseUrl>https://www.SmiMarketplace.com/license</PackageLicenseUrl>
+    <PackageProjectUrl>https://www.SmiMarketplace.com/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SmiSolutions/SmiMarketplace</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="3.2.6" />
+    <PackageReference Include="FluentMigrator.Runner" Version="3.2.6" />
+    <PackageReference Include="linq2db" Version="2.9.8" />
+    <PackageReference Include="MySql.Data" Version="8.0.20" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Smi.Core\Smi.Core.csproj" />
+  </ItemGroup>
+
+</Project>

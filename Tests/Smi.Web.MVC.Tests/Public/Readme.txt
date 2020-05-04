@@ -1,0 +1,1 @@
+﻿This folder contains tests for Smi.Web project (public store)

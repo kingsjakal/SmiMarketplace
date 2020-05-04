@@ -1,0 +1,52 @@
+﻿@model ProductModel
+
+@using Smi.Core.Domain.Catalog;
+@using Smi.Services
+<script>
+    $(document).ready(function() {
+        $("#@Html.IdFor(model => model.IsGiftCard)").click(toggleGiftCard);
+        toggleGiftCard();
+    });
+
+
+    function toggleGiftCard() {
+        if ($('#@Html.IdFor(model => model.IsGiftCard)').is(':checked')) {
+            $('#pnlGiftCardType').show();
+            $('#pnlOverriddenGiftCardAmount').show();
+        } else {
+            $('#pnlGiftCardType').hide();
+            $('#pnlOverriddenGiftCardAmount').hide();
+        }
+    }
+</script>
+ <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-3">
+                <Smi-label asp-for="IsGiftCard" />
+            </div>
+            <div class="col-md-9">
+                <Smi-editor asp-for="IsGiftCard" />
+                <span asp-validation-for="IsGiftCard"></span>
+            </div>
+        </div>
+        <Smi-nested-setting asp-for="IsGiftCard">
+            <div class="form-group" id="pnlGiftCardType">
+                <div class="col-md-3">
+                    <Smi-label asp-for="GiftCardTypeId" />
+                </div>
+                <div class="col-md-9">
+                    <Smi-select asp-for="GiftCardTypeId" asp-items="@(((GiftCardType)Model.GiftCardTypeId).ToSelectList())" />
+                    <span asp-validation-for="GiftCardTypeId"></span>
+                </div>
+            </div>
+            <div class="form-group" id="pnlOverriddenGiftCardAmount">
+                <div class="col-md-3">
+                    <Smi-label asp-for="OverriddenGiftCardAmount" />
+                </div>
+                <div class="col-md-9">
+                    <Smi-editor asp-for="OverriddenGiftCardAmount" />
+                    <span asp-validation-for="OverriddenGiftCardAmount"></span>
+                </div>
+            </div>
+        </Smi-nested-setting>
+    </div>

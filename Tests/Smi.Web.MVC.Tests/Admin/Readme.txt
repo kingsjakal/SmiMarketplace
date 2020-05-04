@@ -1,0 +1,1 @@
+﻿This folder contains tests for Smi.Admin project (admin area)

@@ -1,0 +1,5 @@
+﻿{
+  "DataConnectionString": "Data Source=.\\sqlexpress;Initial Catalog=SmiMarketplace;Persist Security Info=True;Integrated Security=true;",
+  "DataProvider": "sqlserver",
+  "RawDataSettings": {}
+}

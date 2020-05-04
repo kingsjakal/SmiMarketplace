@@ -1,0 +1,34 @@
+﻿@inherits Smi.Web.Framework.Mvc.Razor.SmiRazorPage<TModel>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@*we remove the default InputTagHelper to prevent the checkbox duplicating: https://stackoverflow.com/questions/42544961/asp-net-core-custom-input-tag-helper-rendering-duplicate-checkboxes*@
+@removeTagHelper Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, Smi.Web.Framework
+@addTagHelper *, MiniProfiler.AspNetCore.Mvc
+
+@using Microsoft.AspNetCore.Mvc.ViewFeatures
+@using Smi.Web.Extensions
+@using Smi.Web.Framework
+@using Smi.Web.Framework.Extensions
+@using Smi.Web.Framework.Infrastructure
+@using Smi.Web.Framework.Models
+@using Smi.Web.Framework.Security.Captcha
+@using Smi.Web.Framework.Security.Honeypot
+@using Smi.Web.Framework.Themes
+@using Smi.Web.Framework.UI
+@using Smi.Web.Models.Blogs
+@using Smi.Web.Models.Boards
+@using Smi.Web.Models.Catalog
+@using Smi.Web.Models.Checkout
+@using Smi.Web.Models.Cms
+@using Smi.Web.Models.Common
+@using Smi.Web.Models.Customer
+@using Smi.Web.Models.Media
+@using Smi.Web.Models.News
+@using Smi.Web.Models.Newsletter
+@using Smi.Web.Models.Order
+@using Smi.Web.Models.Polls
+@using Smi.Web.Models.PrivateMessages
+@using Smi.Web.Models.Profile
+@using Smi.Web.Models.ShoppingCart
+@using Smi.Web.Models.Topics
+@using Smi.Web.Models.Vendors
