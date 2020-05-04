@@ -27,7 +27,7 @@ namespace Smi.Web.Areas.Admin.Factories
         private readonly ISettingService _settingService;
         private readonly IStaticCacheManager _staticCacheManager;
         private readonly IWorkContext _workContext;
-        private readonly SmiHttpClient _SmiHttpClient;
+        private readonly SmiHttpClient _smiHttpClient;
 
         #endregion
 
@@ -41,7 +41,7 @@ namespace Smi.Web.Areas.Admin.Factories
             ISettingService settingService,
             IStaticCacheManager staticCacheManager,
             IWorkContext workContext,
-            SmiHttpClient SmiHttpClient)
+            SmiHttpClient smiHttpClient)
         {
             _adminAreaSettings = adminAreaSettings;
             _cacheKeyService = cacheKeyService;
@@ -51,7 +51,7 @@ namespace Smi.Web.Areas.Admin.Factories
             _settingService = settingService;
             _staticCacheManager = staticCacheManager;
             _workContext = workContext;
-            _SmiHttpClient = SmiHttpClient;
+            _smiHttpClient = smiHttpClient;
         }
 
         #endregion
@@ -96,7 +96,7 @@ namespace Smi.Web.Areas.Admin.Factories
                 {
                     try
                     {
-                        return _SmiHttpClient.GetNewsRssAsync().Result;
+                        return _smiHttpClient.GetNewsRssAsync().Result;
                     }
                     catch (AggregateException exception)
                     {

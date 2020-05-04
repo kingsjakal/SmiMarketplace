@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Exchange rate providers",
+  "FriendlyName": "ECB exchange rate provider",
+  "SystemName": "CurrencyExchange.ECB",
+  "Version": "1.26",
+  "SupportedVersions": [ "4.30" ],
+  "Author": "SmiMarketplace team",
+  "DisplayOrder": 1,
+  "FileName": "Smi.Plugin.ExchangeRate.EcbExchange.dll",
+  "Description": "This plugin allows getting exchange rates from ECB (European Central Bank)"
+}
